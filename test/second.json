@@ -1,0 +1,66 @@
+{
+  "user_details": {
+    "start_time": "Thu Nov 19 2020 07:22:47 GMT+0530 (India Standard Time)",
+    "fingerprint": {
+      "hash": "ee7803145b12b23f47546d8d79a21611",
+      "components": {
+        "useragent": {
+          "browser": {
+            "family": "Firefox",
+            "version": "82"
+          },
+          "device": {
+            "family": "Other",
+            "version": "0"
+          },
+          "os": {
+            "family": "Windows",
+            "major": "10",
+            "minor": "0"
+          }
+        },
+        "acceptHeaders": {
+          "accept": "image/webp,*/*",
+          "language": "en-US,en;q=0.5"
+        },
+        "geoip": {
+          "country": null
+        }
+      }
+    },
+    "window_size": {
+      "height": 864,
+      "width": 1536
+    },
+    "window_pos": {
+      "top": -7,
+      "left": -7
+    },
+    "end_time": "Thu Nov 19 2020 07:22:53 GMT+0530 (India Standard Time)"
+  },
+  "user_actions": [
+    {
+      "time": 1477,
+      "action": "click",
+      "value": {
+        "x": 250,
+        "y": 722
+      }
+    },
+    {
+      "time": 638,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 173,
+      "action": "send_keys",
+      "value": "b"
+    },
+    {
+      "time": 239,
+      "action": "send_keys",
+      "value": "c"
+    }
+  ]
+}

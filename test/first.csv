@@ -1,0 +1,3 @@
+{"time":1000,"action":"mouse_move","x":292,"y":680},
+{"time":2000,"action":"press"},
+{"time":2000","action":"send_keys","keys":"dheeraj"}
