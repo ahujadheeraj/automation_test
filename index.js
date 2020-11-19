@@ -14,34 +14,53 @@ const tests = require("./test/second.json").user_actions;
     await driver.manage().window().maximize();
 
     const actions = driver.actions({ async: true });
-
-    {
-      /*driver.executeScript("window.scrollBy(100,1000)");*/
-    }
-
+    let tempString = "";
+    let pauseTime = 0;
+    let lastAction = "";
+    actions.clear();
     tests.forEach((test) => {
       if (test.action === "click") {
-        actions
-          .pause(test.time)
-          .move({ x: test.value.x, y: test.value.y })
-          .press()
-          .perform()
-          .catch(console.log("errrrror"));
+        lastAction = "click";
+        if (tempString === "") {
+          actions
+            .pause(test.time)
+            .move({ x: test.value.x, y: test.value.y })
+            .press()
+            .perform()
+            .catch((err) => console.log(err));
+        } else {
+          actions
+            .pause(pauseTime)
+            .sendKeys(tempString)
+            .perform()
+            .catch((err) => console.log(err));
+          tempString = "";
+          pauseTime = 0;
+        }
       } else if (test.action === "send_keys") {
-        actions
+        lastAction = "send_keys";
+        if (tempString === "") {
+          pauseTime = test.time;
+        }
+        tempString += test.value;
+        /*actions
           .pause(test.time)
           .sendKeys(test.value)
           .perform()
-          .catch(console.log("eroor"));
-        console.log(test.value);
-
-        /*process.stdout.write("\u001B[2J\u001B[0;0f");*/
+          .catch((err) => console.log(err));*/
       }
 
       console.log(test);
     });
+    if (lastAction === "send_keys") {
+      actions
+        .pause(pauseTime)
+        .sendKeys(tempString)
+        .perform()
+        .catch((err) => console.log(err));
+    }
   } catch {
-    console.log("there is some error");
+    console.log(error);
   } finally {
     console.log("successful");
   }

@@ -1,6 +1,6 @@
 {
   "user_details": {
-    "start_time": "Thu Nov 19 2020 07:22:47 GMT+0530 (India Standard Time)",
+    "start_time": "Thu Nov 19 2020 18:13:30 GMT+0530 (India Standard Time)",
     "fingerprint": {
       "hash": "ee7803145b12b23f47546d8d79a21611",
       "components": {
@@ -36,31 +36,59 @@
       "top": -7,
       "left": -7
     },
-    "end_time": "Thu Nov 19 2020 07:22:53 GMT+0530 (India Standard Time)"
+    "end_time": "Thu Nov 19 2020 18:13:43 GMT+0530 (India Standard Time)"
   },
   "user_actions": [
     {
-      "time": 1477,
+      "time": 2496,
       "action": "click",
       "value": {
-        "x": 250,
-        "y": 722
+        "x": 175,
+        "y": 739
       }
     },
     {
-      "time": 638,
+      "time": 591,
+      "action": "send_keys",
+      "value": "d"
+    },
+    {
+      "time": 184,
+      "action": "send_keys",
+      "value": "h"
+    },
+    {
+      "time": 211,
+      "action": "send_keys",
+      "value": "e"
+    },
+    {
+      "time": 155,
+      "action": "send_keys",
+      "value": "e"
+    },
+    {
+      "time": 373,
+      "action": "send_keys",
+      "value": "r"
+    },
+    {
+      "time": 84,
       "action": "send_keys",
       "value": "a"
     },
     {
-      "time": 173,
+      "time": 163,
       "action": "send_keys",
-      "value": "b"
+      "value": "j"
     },
     {
-      "time": 239,
-      "action": "send_keys",
-      "value": "c"
+      "time": 2237,
+      "action": "click",
+      "value": {
+        "x": 1438,
+        "y": 730
+      }
     }
   ]
 }
